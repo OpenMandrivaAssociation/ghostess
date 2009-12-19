@@ -27,6 +27,7 @@ introduction and a usage example.
 %patch0 -p0
 
 %build 
+autoreconf -i
 %configure 
 %make
 
@@ -43,4 +44,7 @@ rm -rf %{buildroot}
 %{_bindir}/%{name}
 %{_bindir}/%{name}_universal_gui
 
+%changelog
+* Sat Dec 19 2009 Frank Kober <emuse@mandriva.org> 20081213-1mdv2010.1
+- import ghostess
 
