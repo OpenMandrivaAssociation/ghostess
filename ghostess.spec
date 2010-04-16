@@ -1,5 +1,5 @@
 %define name    ghostess
-%define version 20081213
+%define version 20100326
 %define release %mkrel 1 
 
 Name:           %{name} 
@@ -14,7 +14,7 @@ License:        GPLv2
 Group:          Sound
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-buildroot 
 BuildRequires:  dssi-devel gtk+-devel liblo-devel alsa-lib-devel
-BuildRequires:  gtk2-devel ladspa-devel jackit-devel
+BuildRequires:  ladspa-devel jackit-devel
 
 %description
 Ghostess is a simple DSSI host with support for the plugin graphical
@@ -27,7 +27,6 @@ introduction and a usage example.
 %patch0 -p0
 
 %build 
-autoreconf -i
 %configure 
 %make
 
@@ -44,7 +43,7 @@ rm -rf %{buildroot}
 %{_bindir}/%{name}
 %{_bindir}/%{name}_universal_gui
 
-%changelog
-* Sat Dec 19 2009 Frank Kober <emuse@mandriva.org> 20081213-1mdv2010.1
-- import ghostess
 
+%changelog
+* Mon Dec 18 2009 Frank Kober <emuse@mandriva.org> 20081213-1mdv2010.0
+- import ghostess
