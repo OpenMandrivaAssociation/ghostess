@@ -14,7 +14,7 @@ License:        GPLv2
 Group:          Sound
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-buildroot 
 BuildRequires:  dssi-devel gtk+-devel liblo-devel alsa-lib-devel
-BuildRequires:  ladspa-devel jackit-devel
+BuildRequires:  ladspa-devel jackit-devel gtk2-devel
 
 %description
 Ghostess is a simple DSSI host with support for the plugin graphical
@@ -27,7 +27,7 @@ introduction and a usage example.
 %patch0 -p0
 
 %build 
-%configure 
+%configure2_5x
 %make
 
 %install
