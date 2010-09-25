@@ -1,5 +1,5 @@
 %define name    ghostess
-%define version 20100326
+%define version 20100923
 %define release %mkrel 1 
 
 Name:           %{name} 
@@ -8,7 +8,6 @@ Version:        %{version}
 Release:        %{release}
 
 Source:         http://smbolton.com/linux/%{name}-%{version}.tar.bz2
-Patch0:         ghostess.strfmt.patch.bz2
 URL:            http://smbolton.com/linux.html
 License:        GPLv2
 Group:          Sound
@@ -24,7 +23,6 @@ introduction and a usage example.
 
 %prep 
 %setup -q  
-%patch0 -p0
 
 %build 
 %configure2_5x
@@ -42,7 +40,7 @@ rm -rf %{buildroot}
 %doc README COPYING AUTHORS
 %{_bindir}/%{name}
 %{_bindir}/%{name}_universal_gui
-
+%{_mandir}/man1/ghostess.1.lzma
 
 %changelog
 * Mon Dec 18 2009 Frank Kober <emuse@mandriva.org> 20081213-1mdv2010.0
