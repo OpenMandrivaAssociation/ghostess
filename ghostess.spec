@@ -1,6 +1,6 @@
 %define name    ghostess
 %define version 20100923
-%define release %mkrel 1 
+%define release 2
 
 Name:           %{name} 
 Summary:        Simple DSSI host with GUI capability
@@ -40,7 +40,7 @@ rm -rf %{buildroot}
 %doc README COPYING AUTHORS
 %{_bindir}/%{name}
 %{_bindir}/%{name}_universal_gui
-%{_mandir}/man1/ghostess.1.lzma
+%{_mandir}/man1/ghostess.1.*
 
 %changelog
 * Mon Dec 18 2009 Frank Kober <emuse@mandriva.org> 20081213-1mdv2010.0
