@@ -1,30 +1,26 @@
-%define name    ghostess
-%define version 20100923
-%define release 2
-
-Name:           %{name} 
+Name:           ghostess
 Summary:        Simple DSSI host with GUI capability
-Version:        %{version} 
-Release:        %{release}
+Version:        20120105
+Release:        1
 
 Source:         http://smbolton.com/linux/%{name}-%{version}.tar.bz2
 URL:            http://smbolton.com/linux.html
 License:        GPLv2
 Group:          Sound
-BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-buildroot 
+BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:  dssi-devel gtk+-devel liblo-devel alsa-lib-devel
 BuildRequires:  ladspa-devel jackit-devel gtk2-devel
 
 %description
 Ghostess is a simple DSSI host with support for the plugin graphical
 user interfaces. It can host several plugins, which can be attributed
-to a dedicated MIDI channel. Refer to the README file for a brief 
+to a dedicated MIDI channel. Refer to the README file for a brief
 introduction and a usage example.
 
-%prep 
-%setup -q  
+%prep
+%setup -q
 
-%build 
+%build
 %configure2_5x
 %make
 
@@ -41,7 +37,3 @@ rm -rf %{buildroot}
 %{_bindir}/%{name}
 %{_bindir}/%{name}_universal_gui
 %{_mandir}/man1/ghostess.1.*
-
-%changelog
-* Mon Dec 18 2009 Frank Kober <emuse@mandriva.org> 20081213-1mdv2010.0
-- import ghostess
