@@ -1,15 +1,19 @@
 Name:           ghostess
 Summary:        Simple DSSI host with GUI capability
 Version:        20120105
-Release:        1
+Release:        2
 
 Source:         http://smbolton.com/linux/%{name}-%{version}.tar.bz2
 URL:            http://smbolton.com/linux.html
 License:        GPLv2
 Group:          Sound
-BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRequires:  dssi-devel gtk+-devel liblo-devel alsa-lib-devel
-BuildRequires:  ladspa-devel jackit-devel gtk2-devel
+
+BuildRequires:  pkgconfig(jack)
+BuildRequires:  pkgconfig(dssi)
+BuildRequires:  pkgconfig(liblo)
+BuildRequires:  pkgconfig(alsa)
+BuildRequires:  pkgconfig(gtk+-2.0)
+BuildRequires:  ladspa-devel
 
 %description
 Ghostess is a simple DSSI host with support for the plugin graphical
