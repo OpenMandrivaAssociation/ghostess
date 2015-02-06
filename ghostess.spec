@@ -1,7 +1,7 @@
 Name:           ghostess
 Summary:        Simple DSSI host with GUI capability
 Version:        20120105
-Release:        2
+Release:        3
 
 Source:         http://smbolton.com/linux/%{name}-%{version}.tar.bz2
 URL:            http://smbolton.com/linux.html
