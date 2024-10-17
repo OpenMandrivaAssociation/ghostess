@@ -4,7 +4,7 @@ Version:        20210101
 Release:        1
 
 Source:         http://smbolton.com/linux/%{name}-%{version}.tar.bz2
-URL:            http://smbolton.com/linux.html
+URL:            https://smbolton.com/linux.html
 License:        GPLv2
 Group:          Sound
 
